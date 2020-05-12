@@ -36,14 +36,15 @@ function DisplayCommand() {
 
     this.execute = function(args) {
         if (args.length < 2) {
-            chat.print(Color.DARK_GRAY+"["+Color.GRAY+"Display"+Color.DARK_GRAY+"] "+Color.RED+" Usage: .D "+Color.DARK_GRAY+"<"+Color.ORANGE+"Name"+Color.DARK_GRAY+">"+Color.GRAY+".")
+            chat.print(Color.DARK_GRAY+"["+Color.GRAY+"Display"+Color.DARK_GRAY+"] "+Color.RED+"Usage: .D "+Color.DARK_GRAY+"<"+Color.ORANGE+"Name"+Color.DARK_GRAY+">"+Color.GRAY+".")
         } else {
             str = "";
             for(var i = 0;i<args.length;i++) {
                 if(i != 0)
                     str += args[i]+" ";
             }
-            chat.print(Color.DARK_GRAY+"["+Color.GRAY+"Display"+Color.DARK_GRAY+"] "+Color.GRAY+" Name"+Color.DARK_GRAY+": "+Color.GRAY+str+".")
+            str = str.substring(" ",str.length-1)
+            chat.print(Color.DARK_GRAY+"["+Color.GRAY+"Display"+Color.DARK_GRAY+"] "+Color.GRAY+"Name"+Color.DARK_GRAY+": "+Color.GRAY+str+".")
             Display.setTitle(str)
         }
     };
