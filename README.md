@@ -1,2 +1,3 @@
 # LiquidBounce-Scripts
-My liquidbounce scripts (1.8.9)
+
+Liquidbounce scripts (1.8.9)
